@@ -1,0 +1,62 @@
+﻿<%@ Master Language="C#" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<script runat="server">
+
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        User u = (User)Session["user"];
+        if (u != null)
+            lblUser.Text = u.Email;
+        else
+            Response.Redirect("login.aspx");
+    }
+
+    protected void lbLogout_Click(object sender, EventArgs e)
+    {
+        FormsAuthentication.SignOut();
+        Session.Abandon();
+        Response.Redirect("login.aspx");
+    }
+
+    protected void btnSearch_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("search.aspx?title=" +  Server.UrlEncode(txtTitle.Text));
+    }
+</script>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>BooksForCOD.Com</title>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="header">BooksForCOD.Com</div>
+    <div class="user">
+    Welcome [<asp:Label ID="lblUser" runat="server" Font-Bold ="true" Text=""></asp:Label>] 
+    &nbsp;
+    <asp:LinkButton ID="lbLogout" runat="server" CausesValidation = "false" 
+       onclick="lbLogout_Click">Logout</asp:LinkButton>
+    &nbsp;
+    <a href="changepassword.aspx">Change Password</a>
+    &nbsp;
+    <a href="changeprofile.aspx">Change Profile</a>
+    &nbsp;
+    <a href="myorders.aspx">My Orders</a>
+    &nbsp;
+    <a href="showcart.aspx">Show Cart</a>
+    &nbsp;
+    <a href="default.aspx">Home</a>
+    <span class="search">
+    Book Title 
+        <asp:TextBox ID="txtTitle" Width="100px" runat="server"></asp:TextBox>
+        <asp:Button ID="btnSearch"     runat="server" Text="Search" 
+            onclick="btnSearch_Click" />
+    </span>
+    </div>
+      <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+      </asp:ContentPlaceHolder>
+     </form>
+</body>
+</html>

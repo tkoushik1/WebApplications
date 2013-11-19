@@ -1,0 +1,43 @@
+﻿body
+{
+    font-family: verdana;
+    font-size: 10pt;
+    background-color: #CCCCCC;
+}
+
+.header
+{
+    font-family: Arial;
+    font-size: 30pt;
+    font-weight: bold;
+    background-color: #800000;
+    color: #FFFFFF;
+    letter-spacing: 5pt;
+    text-align:center;
+}
+
+.user
+{
+    background-color: white;
+    font-weight: bold;
+    height:25px;
+    vertical-align:middle;
+    
+}
+
+.search
+{
+  position:absolute ;
+  right:10px;
+}
+
+.title 
+{
+    font-weight :bold;
+    color:navy;
+}
+
+h3 
+{
+    color:gray;
+}
