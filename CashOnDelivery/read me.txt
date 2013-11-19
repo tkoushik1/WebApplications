@@ -1,0 +1,16 @@
+This website allows user to buy books online with Cash on Delivery option. It is FlipKart.Com kind of application.
+
+The following are the major operations in this application.
+Registration of user
+Forgot Password
+Login
+Change password
+Change Profile
+List of recently added books
+Search books by title
+Displaying details of a book
+Add book to Cart
+Displaying cart and allowing user to delete books from Cart
+Orders placed by user
+Logout
+

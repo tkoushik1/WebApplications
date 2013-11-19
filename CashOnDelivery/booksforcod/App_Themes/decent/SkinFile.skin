@@ -1,0 +1,8 @@
+﻿ <asp:GridView  runat="server" Width="100%">
+      <HeaderStyle BackColor="White" Font-Bold="True" />
+      <EmptyDataRowStyle BackColor="White" Font-Bold="True" ForeColor="Red" />
+ </asp:GridView>
+
+
+
+
