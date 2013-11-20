@@ -1,0 +1,78 @@
+﻿@model cim.Models.Interaction
+@{
+    ViewBag.Title = "AddInteraction";
+}
+
+
+
+<h2>Add Interaction</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Interaction</legend>
+
+        <div class="editor-label">
+            Client 
+        </div>
+        <div class="editor-field">
+            @Html.DropDownListFor(model => model.ClientId, cim.Models.Client.Clients)
+            @Html.ValidationMessageFor(model => model.ClientId)
+        </div>
+
+        <div class="editor-label">
+            Interaction Type 
+        </div>
+        <div class="editor-field">
+            @Html.DropDownListFor(model => model.IntType, cim.Models.Database.InteractionTypes, new { style = "width:150px" })
+            @Html.ValidationMessageFor(model => model.IntType)
+        </div>
+
+        <div class="editor-label">
+            Interaction Date
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(model => model.IntDate, new { type ="date" })
+            @Html.ValidationMessageFor(model => model.IntDate)
+
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Remarks)
+        </div>
+        <div class="editor-field">
+            @Html.TextAreaFor(model => model.Remarks, new { cols = 50, rows = 5 })
+            @Html.ValidationMessageFor(model => model.Remarks)
+        </div>
+
+        <p>
+            <input type="submit" value="Add Interaction" />
+        </p>
+
+        <div class="error">@ViewBag.Message</div>
+    </fieldset>
+}
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+@section MyJavaScript{
+    <script type="text/javascript">
+        $(function () {
+            /*
+            $("#IntDate").datepicker(
+                          {
+                              dateFormat: 'dd/mm/yy',
+                              showAnim: 'slide',
+                              changeMonth: true,
+                              changeYear: true,
+                          }
+                         );
+                         */
+        });
+    </script>
+}

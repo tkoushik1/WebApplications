@@ -1,0 +1,125 @@
+﻿@model cim.Models.Client
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Client</h2>
+
+<fieldset>
+    <legend>Client Details</legend>
+    <p />
+    <table style="border-spacing: 5pt">
+        <tr>
+
+            <td class="colheading">
+                @Html.DisplayNameFor(model => model.Name)
+            </td>
+
+            <td>
+                @Html.DisplayFor(model => model.Name)
+
+            </td>
+        </tr>
+
+
+        <tr>
+
+            <td class="colheading">
+                @Html.DisplayNameFor(model => model.Email)
+            </td>
+
+            <td>
+                @Html.DisplayFor(model => model.Email)
+
+            </td>
+        </tr>
+
+
+        <tr>
+
+            <td class="colheading">
+                @Html.DisplayNameFor(model => model.Phones)
+            </td>
+
+            <td>
+                @Html.DisplayFor(model => model.Phones)
+
+            </td>
+        </tr>
+
+        <tr>
+
+            <td class="colheading">
+                @Html.DisplayNameFor(model => model.Address)
+            </td>
+
+            <td>
+                @Html.DisplayFor(model => model.Address)
+
+            </td>
+        </tr>
+
+
+        <tr>
+
+            <td class="colheading">
+                @Html.DisplayNameFor(model => model.AddedOn)
+            </td>
+
+            <td>
+                @Html.DisplayFor(model => model.AddedOn)
+
+            </td>
+
+        </tr>
+
+
+        <tr>
+
+            <td class="colheading">Creator
+            </td>
+
+            <td>
+                @Model.Creator.Name
+            </td>
+        </tr>
+
+    </table>
+</fieldset>
+
+
+<fieldset>
+    <legend>Interactions</legend>
+    <p />
+    @{
+    if(Model.AllInteractions.Count() > 0) 
+    {
+    <table border="1" style="width: 100%">
+        <tr>
+            <th class="colheading">Date</th>
+            <th class="colheading">Type</th>
+            <th class="colheading">Employee</th>
+            <th class="colheading">Remarks</th>
+        </tr>
+
+        @foreach (cim.Models.Interaction item in @Model.AllInteractions.OrderByDescending ( m => m.IntDate ) ) 
+        {
+            <tr>
+                <td class="value">@item.IntDate.ToString("dd-MM-yyyy")</td>
+                <td class="value">@item.IntTypeString</td>
+                <td class="value">@item.Employee.Name</td>
+                <td class="value">@item.Remarks</td>
+            </tr>
+        }
+    </table>
+    }
+    else
+    {
+       <div class="error">Sorry! No interactions are found!</div>
+    }
+  }
+   
+
+</fieldset>
+

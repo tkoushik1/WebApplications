@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "Home";
+}
+
+<h2>Search Client</h2>
+
+@using ( Ajax.BeginForm("SearchClients", "Client", new AjaxOptions { UpdateTargetId = "searchresults"}))
+{
+  <span>Customer Name :</span>
+  <input type="text" name="pattern" />
+  <input type="submit" value="Search" />
+  <p />
+    
+  <div id="searchresults"></div>
+   
+}
+
+
+@section Scripts
+{
+   <script src='@Url.Content("~/Scripts/jquery.unobtrusive-ajax.min.js")'></script>
+}
+

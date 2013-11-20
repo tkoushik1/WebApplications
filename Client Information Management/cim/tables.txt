@@ -1,0 +1,32 @@
+﻿create table Employees
+( Id    int  identity(1,1) primary key,
+  Name  varchar(50),
+  Password varchar(10),
+  Designation  varchar(50)
+);
+ 
+insert into employees values('Scott Guthrie','s','Sr. Marketing Manger');
+insert into employees values('Alen Stevens','a','HR Manager');
+
+create table Clients
+( Id     int  identity(1000,1) primary key,
+  Name   varchar(50),
+  Email  varchar(50),
+  Phones varchar(30),
+  Address varchar(100),
+  AddedBy int references Employees(Id),
+  AddedOn datetime
+ );
+
+
+
+ create table Interactions 
+ ( Id       int identity(100,1) primary key,
+   ClientId int references Clients(Id) on delete cascade,
+   EmpId    int references Employees(Id),
+   IntType  char(1),
+   IntDate  datetime,
+   Remarks  varchar(500)
+)
+
+    

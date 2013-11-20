@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/themes/base/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="banner">Clients Information Management</div>
+    <table style="width:100%;height:800px">
+        <tr>
+            <td class="menu">
+                User : [@Session["name"]]
+                <p />
+                @Html.ActionLink("Change Password","ChangePassword","Employee")
+                <p />
+                @Html.ActionLink("Logout","Logout","Employee")
+                <p />
+
+                @Html.ActionLink("Home","Home","Employee", null, new { @class="link"} )
+                <br />
+                @Html.ActionLink("Add Client","Add","Client" ,null, new { @class="link"})
+                <br />
+                @Html.ActionLink("Add Interaction","AddInteraction","Client", null, new { @class="link"})
+                <br />
+                @Html.ActionLink("Recent Interactions","RecentInteractions","Client", null, new { @class="link"})
+                <br />
+
+            </td>
+            <td class="body">
+                 @RenderBody()
+            </td>
+        </tr>
+    </table>
+   
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryui")
+    @RenderSection("scripts", required: false)
+    @RenderSection("MyJavaScript", required: false)
+</body>
+</html>

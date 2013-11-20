@@ -1,0 +1,56 @@
+﻿@model IEnumerable<cim.Models.Interaction>
+
+@{
+    ViewBag.Title = "RecentInteractions";
+}
+
+<h2>Recent Interactions</h2>
+
+
+<table  style="width:100%" border="1">
+    <tr>
+        <th class="colheading">
+            Client
+        </th>
+        <th class="colheading">
+            Employee
+        </th>
+        <th class="colheading">
+            Interaction Type
+        </th>
+        <th class="colheading">
+            Interaction Date
+        </th>
+        <th class="colheading">
+            Remarks 
+        </th>
+        <th class="colheading"></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td class="value">
+            @item.Client.Name
+        </td>
+        <td class="value">
+            @item.Employee.Name 
+        </td>
+        <td class="value">
+            @item.IntTypeString
+        </td>
+        <td class="value">
+            @item.IntDate.ToString("dd-MM-yy")
+        </td>
+        <td class="value">
+            @item.Remarks 
+        </td>
+        <td class="value">
+            @Html.ActionLink("Delete", "DeleteInteraction", new { id=item.Id } ,
+               new { onclick="return confirm('Do you want to delete this interaction?')" }) 
+        </td>
+    </tr>
+}
+
+</table>
+
+<div class="error">@ViewBag.Message</div>

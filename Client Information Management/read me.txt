@@ -1,0 +1,14 @@
+This web application allows a company to keep track of clients and interactions with clients.
+
+The following are the major operations in this application.
+Employee Login
+Change password
+Logout
+Add Client
+Search Clients
+Getting details of Client
+Deleting client
+Listing recent interactions with client
+Adding Interaction with client
+Delete interaction
+Login with employee id 1 and password s and test options
