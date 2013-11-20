@@ -1,0 +1,60 @@
+﻿body
+{
+    font-family: verdana;
+    font-size: 10pt;
+    background-color: red;
+}
+
+.mainblock
+{
+    background-color: white;
+    width: 780px;
+    height:800px;
+    margin:5px;
+    border:2px solid black;
+    text-align:left;
+}
+
+
+.colhead 
+{
+   color:White;
+   text-align:right;   
+   background-color: Gray;
+}
+td 
+{
+    vertical-align:top;
+}
+.body 
+{
+    text-align:left;
+    float:right;
+    width:580px;
+}
+.user
+{
+    height: 20px;
+    background-color: gray;
+    color:White;
+    font-weight :bold;
+}
+
+.menu 
+{
+   float:left;
+   width:200px;
+   height: 730px;
+   background-color:#dddddd;
+}
+.header
+{
+    font-family: Arial;
+    font-size: 30pt;
+    background-color: black;
+    letter-spacing: 5pt;
+    font-weight: bold;
+    text-align: center;
+    color:White;
+    height:50px;
+}

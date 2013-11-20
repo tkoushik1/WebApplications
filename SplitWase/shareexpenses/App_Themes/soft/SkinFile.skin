@@ -1,0 +1,4 @@
+﻿<asp:GridView runat="server">
+   <HeaderStyle BackColor="#dddddd" ForeColor="Red"  HorizontalAlign="Center"  font-bold="true" />
+</asp:GridView>
+

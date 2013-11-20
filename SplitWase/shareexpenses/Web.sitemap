@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+    <siteMapNode url="default.aspx" title="Home"  description="">
+      <siteMapNode url="" title="Programmes"  description="">
+        <siteMapNode url="addprogramme.aspx" title="Add Programme"/>
+        <siteMapNode url="addmember.aspx" title="Add Member"/>
+      </siteMapNode>
+
+      <siteMapNode url="" title="Expenses"  description="">
+        <siteMapNode url="addcontribution.aspx" title="Add Contribution"/>
+        <siteMapNode url="addexpenditure.aspx" title="Add Expenditure"/>
+      </siteMapNode>
+      <siteMapNode url="" title="Reports"  description="">
+        <siteMapNode url="expensesreport.aspx" title="Expenses Report"/>
+      </siteMapNode>
+      
+      <siteMapNode url="changepassword.aspx" title="Change Password"  description="" />
+    </siteMapNode>
+</siteMap>

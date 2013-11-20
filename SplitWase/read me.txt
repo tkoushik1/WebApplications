@@ -1,0 +1,16 @@
+This website allows user record expenses regarding a programme like a trip so that how much each member of the trip owes and pays is tracked.
+
+The following are the major operations in this application.
+Registration of user
+Forgot Password
+Login
+Change password
+Add programme
+Add a member to a programme
+Get details of a programme including how much each member paid so far and owes
+Delete a programme with all its details
+Add contribution by a member towards the programme
+Add expenditure related to a programme
+List expenses related to a programme including members share
+Logout
+
