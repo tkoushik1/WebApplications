@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+"http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+    <definition name="master" template="/master.jsp">
+        <put-attribute name="title"  value="Budgeting"/>
+        <put-attribute name="menu"   value="/menu.jsp"/>
+        <put-attribute name="body"   value=""/>
+    </definition>
+
+    <definition name="home" extends="master">
+        <put-attribute name="title"  value="Home Page"/>
+        <put-attribute name="body"   value="/homepage.jsp"/>     
+    </definition>
+    
+    <definition name="budgets" extends="master">
+        <put-attribute name="title"  value="List Budgets"/>
+        <put-attribute name="body"   value="/budgetspage.jsp"/>     
+    </definition>
+    
+     <definition name="expenditures" extends="master">
+        <put-attribute name="title"  value="List Expenditures"/>
+        <put-attribute name="body"   value="/expenditurespage.jsp"/>     
+    </definition>
+    
+    <definition name="changepassword" extends="master">
+        <put-attribute name="title"  value="Change Password"/>
+        <put-attribute name="body"   value="/changepasswordpage.jsp"/>     
+    </definition>
+    
+     <definition name="addbudget" extends="master">
+        <put-attribute name="title"  value="Add Budget"/>
+        <put-attribute name="body"   value="/addbudgetpage.jsp"/>     
+    </definition>
+    
+     <definition name="addexpenditure" extends="master">
+        <put-attribute name="title"  value="Add Expenditure"/>
+        <put-attribute name="body"   value="/addexpenditurepage.jsp"/>     
+    </definition>
+ 
+</tiles-definitions>

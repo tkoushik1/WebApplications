@@ -1,0 +1,35 @@
+
+.header {
+    color:white;
+    background-color:red;
+    font-size:25pt;
+    font-weight:bold;
+    letter-spacing: 5pt;
+}
+body {
+    font-family:verdana;
+    font-size:10pt;
+}
+
+.menu {
+    background-color:#dddddd;
+    font-weight:bold;
+}
+
+.error {
+    color:red;
+    font-weight:bold;
+}
+
+.bluewhite {
+     color:white;
+     background-color:navy;
+     font-weight: bold;
+}
+
+h2 {
+    color: blue;
+    font-family:arial;
+    font-size:14pt;
+    font-weight:bold;
+}

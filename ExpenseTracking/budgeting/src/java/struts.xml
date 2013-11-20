@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+      <package name="default" namespace="/"  extends="struts-default">
+        <global-results>
+            <result name="error">/error.jsp</result>
+            <result name="home">/home.action</result>
+        </global-results>
+        
+         <action name="changepassword" class="action.ChangePasswordAction">
+            <result name="success">/changepassword.jsp</result>
+            <result name="error">/changepassword.jsp</result>
+            <result name="input">/changepassword.jsp</result>
+        </action>
+        
+         <action name="deleteexpenditure" class="action.DeleteExpenditureAction">
+            <result name="success" type="redirectAction">listexpenditures</result>
+        </action>
+        
+        
+         <action name="logout" class="action.LogoutAction">
+            <result name="login">/login.jsp</result>
+        </action>
+        
+        <action name="login" class="action.LoginAction">
+            <result name="success" type="redirectAction">home.action</result>
+            <result name="error">/login.jsp</result>
+            <result name="input">/login.jsp</result>
+        </action>
+       
+      
+        <action name="addbudgetform" class="action.AddBudgetForm">
+            <result name="*">/addbudget.jsp</result>
+        </action>
+        
+        <action name="addbudget" class="action.AddBudgetAction">
+            <result name="success">/addbudget.jsp</result>
+             <result name="input">/addbudget.jsp</result>
+            <result name="error">/addbudget.jsp</result>
+        </action>
+        
+        <action name="addexpenditureform" class="action.AddExpenditureForm">
+            <result name="*">/addexpenditure.jsp</result>
+        </action>
+        
+        <action name="addexpenditure" class="action.AddExpenditureAction">
+            <result name="*">/addexpenditure.jsp</result>
+        </action>
+      
+        <action name="listbudgets" class="action.ListBudgetsAction">
+             <result name="success">/budgets.jsp</result>
+        </action>
+        
+        <action name="listexpenditures" class="action.ListExpendituresAction">
+             <result name="success">/expenditures.jsp</result>
+        </action>
+        
+         <action name="home" class="action.ActualExpendituresAction">
+             <result name="success">/home.jsp</result>
+        </action>
+       
+      </package>
+      
+      <package name="all" namespace="/all" extends="struts-default" >
+        <action name="register" class="action.RegisterAction">
+            <result name="success">registerdone.jsp</result>
+            <result name="error">/all/register.jsp</result>
+            <result name="input">/all/register.jsp</result>
+        </action>
+        
+        <action name="recoverpassword" class="action.RecoverPasswordAction">
+            <result name="*">recoverpassword.jsp</result>
+        </action>
+        
+    </package>
+
+
+</struts>

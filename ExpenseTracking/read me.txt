@@ -1,0 +1,28 @@
+This website allows users to compare their expenditure against budget amount in each category of the current month.
+It allows user to do the following:
+
+Login
+Register as new user
+Recover password
+Change password
+Add budget for a category
+List budget for categories
+Add Expenditure
+List Expenditure
+Delete Expenditure
+Compare budget amount with actual expenditure in each category
+
+Products and frameworks used in this project
+
+Java EE 6.0
+Struts 2.0 
+The following features of Struts 2.0 were used in this project.
+UI Tags
+Iterator Tag and other core tags
+Tiles for templating
+Validation with annotations
+Oracle10g Express Edition
+NetBeans IDE 7.0
+Jdk 6.0
+Tomcat 7.0
+Java Mail API and Mail Server
